@@ -1,3 +1,4 @@
+import FAQ from "./components/faq";
 
 
 function App() {
@@ -206,12 +207,12 @@ function App() {
                             </div>
                         </div>
                         <div className="flex gap-8 items-center">
-                            <div className="p-4 w-[56px] h-[56px] border-[1px] border-[#D1E9FF] rounded-full bg-[#FFFFFFE5] " >
+                            <button className="p-4 w-[56px] h-[56px] border-[1px] border-[#D1E9FF] rounded-full bg-[#FFFFFFE5] " >
                                 <img src={process.env.PUBLIC_URL + "/images/arrowleft.svg"} alt="left arrow" className="w-6 h-6" />
-                            </div>
-                            <div className="p-4 w-[56px] h-[56px] border-[1px] border-[#D1E9FF] rounded-full bg-[#FFFFFFE5] " >
+                            </button>
+                            <button className="p-4 w-[56px] h-[56px] border-[1px] border-[#D1E9FF] rounded-full bg-[#FFFFFFE5] " >
                                 <img src={process.env.PUBLIC_URL + "/images/arrowright.svg"} alt="right arrow" className="w-6 h-6" />
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -224,11 +225,29 @@ function App() {
                         <img src={process.env.PUBLIC_URL + "/images/testimonialImg3.png"} alt="testimonial" className="" />
                         <img src={process.env.PUBLIC_URL + "/images/testimonialImg4.png"} alt="testimonial" className="" />
                         <img src={process.env.PUBLIC_URL + "/images/testimonialImg5.png"} alt="testimonial" className="" />
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
             
+            <div className="py-[96px] px-[96px] 2xl:px-[128px] flex justify-between gap-5 " >
+                <div className="w-[40%]" >
+                    <span className="mb-3 text-lg text-[#175CD3] font-semibold " >Support</span>
+                    <h5 className="mb-5 text-[48px] font-semibold text-[#1D2939] " >FAQs</h5>
+                    <p className="text-xl text-[#667085] " >
+                        Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please <span className="underline">chat to our friendly team.</span>
+                    </p>
+                </div>
+
+                <div className="flex-1" >
+                    {
+                        faqs.map((faq, index) => {
+                            return (
+                                <FAQ question={faq.question} last={faq.last} key={index} />
+                            )
+                        })
+                    }
+                </div>
+            </div>
             
         </div>
     )
@@ -236,3 +255,27 @@ function App() {
 
 
 export default App;
+
+
+
+let faqs = [
+    {
+        question: "How many participants can join a ClearLink video conference?"
+    },
+    {
+        question: "Can I use ClearLink on multiple devices?"
+    },
+    {
+        question: "Is ClearLink compatible with other video conferencing platforms?"
+    },
+    {
+        question: "How does ClearLink ensure the security of my video conferences?"
+    },
+    {
+        question: "Do I need to download any software to use ClearLink?"
+    },
+    {
+        question: "What kind of customer support does ClearLink provide?",
+        last:true
+    }
+]
