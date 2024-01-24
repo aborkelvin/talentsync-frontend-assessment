@@ -248,7 +248,112 @@ function App() {
                     }
                 </div>
             </div>
+
+            <div className="py-12 pl-[96px] 2xl:pl-[128px] flex justify-between items-start ">
+                <div className="lg:pt-5 2xl:pt-10" >
+                    <h5 className="mb-8 text-[#101828] text-[36px] 2xl:text-[48px] font-semibold " >Ready to clear the path to perfect communication?</h5>
+                    <div className="mb-5 flex gap-3 items-center">
+                        <img src={process.env.PUBLIC_URL + "/images/checkcircle.svg"} alt="check circle" className="w-[28px] h-[28px] " />
+                        <span className="text-xl text-[#475467] " >30 days free trial</span>
+                    </div>
+                    <div className="mb-5 flex gap-3 items-center">
+                        <img src={process.env.PUBLIC_URL + "/images/checkcircle.svg"} alt="check circle" className="w-[28px] h-[28px] " />
+                        <span className="text-xl text-[#475467] " >Cancel at any time</span>
+                    </div>
+                    <div className="mb-5 flex gap-3 items-center">
+                        <img src={process.env.PUBLIC_URL + "/images/checkcircle.svg"} alt="check circle" className="w-[28px] h-[28px] " />
+                        <span className="text-xl text-[#475467] " >Access to all features</span>
+                    </div>
+                    <div className="mb-10 flex gap-3 items-center">
+                        <img src={process.env.PUBLIC_URL + "/images/checkcircle.svg"} alt="check circle" className="w-[28px] h-[28px] " />
+                        <span className="text-xl text-[#475467] " >Peronalized onboarding</span>
+                    </div>
+                    <div className="flex gap-2">
+                        <button className="px-6 py-[14px] rounded-full border-[1px] border-[#98A2B3] bg-[#FFFFFF] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
+                         text-base text-[#101828] font-semibold " >
+                            Talk to sales
+                        </button>
+                        <button className="px-6 py-[14px] rounded-full bg-[#175CD3] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
+                        text-base text-[#FFFFFF] font-semibold  " >
+                            Start your free trial
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <img src={process.env.PUBLIC_URL+ "/images/screenmockup.png" } alt="Screen mockup" className="lg:min-w-[724px] 2xl:min-w-[824px]" />
+                </div>
+            </div>
             
+            <div className="pt-[96px] pb-12 px-[96px] 2xl:px-[128px] flex justify-between gap-12 ">
+                <div className="max-w-[400px] " >
+                    <div className="mb-8 flex gap-[10px] items-center" >
+                        <img
+                            src={process.env.PUBLIC_URL + '/images/logo.svg'}
+                            alt="ClearLink logo"
+                            className="w-[26px] h-[28px] "
+                        />
+                        <h1 className="text-[#101828] font-semibold text-2xl" >ClearLink <span className="text-[#528BFF]" >. </span> </h1>
+                    </div>
+                    <p className="text-[#475467] text-lg " >
+                        ClearLink is your gateway to effortless, high-quality video conferencing. Join us in shaping the future of communication!
+                    </p>
+                </div>
+                <div className="flex gap-6 lg:gap-8">
+                    <div className="flex flex-col gap-4 min-w-[150px] " >
+                        <span className="text-base text-[#667085] font-semibold " >Product</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Overview</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Features</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Solutions</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Tutorials</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Pricing</span>
+                    </div>
+                    <div className="flex flex-col gap-4 min-w-[150px] " >
+                        <span className="text-base text-[#667085] font-semibold " >Company</span>
+                        <span className="text-lg font-semibold text-[#475467]" >About us</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Careers</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Press</span>
+                        <span className="text-lg font-semibold text-[#475467]" >News</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Contact</span>
+                    </div>
+                    <div className="flex flex-col gap-4 min-w-[150px] " >
+                        <span className="text-base text-[#667085] font-semibold " >Resources</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Blog</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Events</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Help centre</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Tutorials</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Support</span>
+                    </div>
+                    <div className="flex flex-col gap-4 min-w-[150px] " >
+                        <span className="text-base text-[#667085] font-semibold " >Legal</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Terms</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Privacy</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Cookies</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Licenses</span>
+                        <span className="text-lg font-semibold text-[#475467]" >Contact</span>
+                    </div>
+                    <div className="" >
+                        <span className="mb-4 block text-base font-semibold text-[#004EEB]" >Get the app</span>
+                        <img src={process.env.PUBLIC_URL + "/images/appstore.svg"} alt="app store" className="mb-4 min-w-[135px]" />
+                        <img src={process.env.PUBLIC_URL + "/images/googlestore.svg"} alt="google store" className=" min-w-[135px] " />
+                    </div>
+                </div>
+            </div>
+
+            <div className="py-12 2xl:px-[160px] bg-[#F9FAFB] flex items-center justify-between">
+                <span className="text-base text-[#667085] " >
+                    © 2023 ClearLink. All rights reserved.
+                </span>
+                <div className="flex gap-6" >
+                    {/* linkedIN, twitter, facebook, instagram, github, youtube */}
+                    <img src={process.env.PUBLIC_URL + "/images/socials/linkedin.svg"} alt="linkedin" className="w-6 h-6" />
+                    <img src={process.env.PUBLIC_URL + "/images/socials/twitter.svg"} alt="twitter" className="w-6 h-6" />
+                    <img src={process.env.PUBLIC_URL + "/images/socials/facebook.svg"} alt="facebook" className="w-6 h-6" />
+                    <img src={process.env.PUBLIC_URL + "/images/socials/instagram.svg"} alt="instagram" className="w-6 h-6" />
+                    <img src={process.env.PUBLIC_URL + "/images/socials/github.svg"} alt="github" className="w-6 h-6" />
+                    <img src={process.env.PUBLIC_URL + "/images/socials/youtube.svg"} alt="youtube" className="w-6 h-6" />
+                </div>
+            </div>
+
         </div>
     )
 }    
