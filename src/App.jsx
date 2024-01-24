@@ -1,63 +1,67 @@
+import { useState } from "react";
 import FAQ from "./components/faq";
 
 
 function App() {
+
+    const [currentFaq, setCurrentFaq] = useState(0)
+
     return (
-        <div className="">
-            <div className="bg-[url('images/bgimg.png')] pt-10 pb-[96px] px-[128px] " >
+        <div className=" font-sans ">
+            <div className="bg-[url('images/bgimg.png')] pt-10 pb-[96px] px-[72px] xl:px-[96px] 2xl:px-[128px] " >
             
-                <div className="mb-[160px] px-8 py-4 flex justify-between items-center bg-[#F2F4F7] rounded-full border-[1px] border-[#D0D5DD] " >
+                <div className="mb-[160px] px-4 xl:px-6 2xl:px-8 py-4 flex justify-between items-center bg-[#F2F4F7] rounded-full border-[1px] border-[#D0D5DD] " >
                     <div className="flex gap-[10px] items-center" >
                         <img
                             src={process.env.PUBLIC_URL + '/images/logo.svg'}
                             alt="ClearLink logo"
-                            className="w-[26px] h-[28px] "
+                            className="w-[20px] h-[22px] xl:w-[26px] xl:h-[28px] "
                         />
-                        <h1 className="text-[#101828] font-semibold text-2xl" >ClearLink <span className="text-[#528BFF]" >. </span> </h1>
+                        <h1 className="text-[#101828] font-semibold text-xl xl:text-2xl" >ClearLink <span className="text-[#528BFF]" >. </span> </h1>
                     </div>
-                    <nav className="flex gap-10 items-center" >
-                        <div className="flex gap-[6px] items-center ">
-                            <span className="text-[#667085] text-lg font-semibold " >Products</span>
+                    <nav className="flex gap-5 xl:gap-7 2xl:gap-10 items-center" >
+                        <button className="flex gap-1 2xl:gap-[6px] items-center ">
+                            <span className="text-[#667085] text-base xl:text-lg font-semibold " >Products</span>
                             <img src={process.env.PUBLIC_URL + '/images/downarrow.svg'} alt="down arrow" className="w-[18px] h-[18px]" />
-                        </div>
-                        <div className="flex gap-[6px] items-center ">
-                            <span className="text-[#667085] text-lg font-semibold " >Solutions</span>
+                        </button>
+                        <button className="flex gap-1 2xl:gap-[6px] items-center ">
+                            <span className="text-[#667085] text-base xl:text-lg font-semibold " >Solutions</span>
                             <img src={process.env.PUBLIC_URL + '/images/downarrow.svg'} alt="down arrow" className="w-[18px] h-[18px]" />
-                        </div>
-                        <div className="flex gap-[6px] items-center ">
-                            <span className="text-[#667085] text-lg font-semibold " >Resources</span>
+                        </button>
+                        <button className="flex gap-1 2xl:gap-[6px] items-center ">
+                            <span className="text-[#667085] text-base xl:text-lg font-semibold " >Resources</span>
                             <img src={process.env.PUBLIC_URL + '/images/downarrow.svg'} alt="down arrow" className="w-[18px] h-[18px]" />
-                        </div>
-                        <span className="text-[#667085] text-lg font-semibold " >Pricing</span>
+                        </button>
+                        <span className="text-[#667085] text-base xl:text-lg font-semibold cursor-pointer " >Pricing</span>
                     </nav>
-                    <div className="flex gap-2 items-center" >
-                        <button className="px-6 py-[14px] rounded-full border-[1px] border-[#98A2B3] bg-[#FFFFFF] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
-                         text-base text-[#101828] font-semibold " >
+                    <div className="flex gap-1 xl:gap-2 items-center" >
+                        <button className="px-4 xl:px-6 py-3 xl:py-[14px] rounded-full border-[1px] border-[#98A2B3] bg-[#FFFFFF] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
+                         text-sm xl:text-base text-[#101828] font-semibold " >
                             Talk to sales
                         </button>
-                        <button className="px-6 py-[14px] rounded-full bg-[#175CD3] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
-                        text-base text-[#FFFFFF] font-semibold  " >
+                        <button className="px-4 xl:px-6 py-3 xl:py-[14px] rounded-full bg-[#175CD3] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
+                        text-sm xl:text-base text-[#FFFFFF] font-semibold  " >
                             Sign up for free
                         </button>
                     </div>
                 </div>
-                <div className="flex justify-between gap-10" >
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-7 lg:gap-10" >
             
                     <div className="" >
-                        <h2 className="mb-6 text-[64px] font-semibold leading-[72px] text-[#1D2939] " >
-                            Uniting the world,<br /> one video call at a time
+                        <h2 className="mb-3 xl:mb-4 2xl:mb-6 text-[48px] xl:text-[56px] 2xl:text-[64px] font-semibold leading-[65px] 2xl:leading-[72px] text-[#1D2939] " >
+                            Uniting the world,<br className="hidden 2xl:block" /> one video call at a time
                         </h2>
-                        <p className="mb-12 text-[#667085] text-2xl " >
-                            Experience the future of communication with ClearLink –<br /> where crystal-clear video conferencing meets <br /> unparalleled simplicity.
+                        <p className="mb-6 xl:mb-8 2xl:mb-12 text-[#667085] text-xl xl:text-2xl " >
+                            Experience the future of communication with ClearLink –<br className="hidden 2xl:block" /> where crystal-clear video conferencing meets <br className="hidden 2xl:block" /> unparalleled simplicity.
                         </p>
-                        <div className="mb-12 flex gap-5 items-center ">
-                            <button className="py-4 px-[28px] rounded-full bg-[#175CD3] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
-                             text-[#FFFFFF] text-lg font-semibold " >
+                        <div className="mb-6 xl:mb-8 2xl:mb-12 flex gap-5 items-center ">
+                            <button className="py-4 px-3 xl:px-[28px] rounded-full bg-[#175CD3] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]
+                             text-[#FFFFFF] text-base xl:text-lg font-semibold " >
                                 Start your free trial
                             </button>
                             <div className="flex gap-3 items-center" >
                                 <img src={process.env.PUBLIC_URL + "/images/robot.svg"} alt="AI assistant" className="w-5 h-5" />
-                                <span className="text-[#175CD3] text-lg font-semibold " >Discover AI assistant</span>
+                                <span className="text-[#175CD3] text-base xl:text-lg font-semibold " >Discover AI assistant</span>
                             </div>
                         </div>
                         <div className="flex gap-4 items-center ">
@@ -76,7 +80,7 @@ function App() {
                         </div>
                     </div>
                     
-                    <div className="p-8 max-w-[584px] h-fit w-full rounded-2xl border-[1px] border-[#B2DDFF] bg-[#EFF8FF] shadow-[0px_32px_64px_-12px_rgba(16,24,40,0.14)] " >
+                    <div className="p-8 max-w-[584px] min-w-[530px] h-fit w-full rounded-2xl border-[1px] border-[#B2DDFF] bg-[#EFF8FF] shadow-[0px_32px_64px_-12px_rgba(16,24,40,0.14)] " >
                         <div className="mb-10 grid grid-cols-3 grid-rows-2 gap-5" >
                             <img src={process.env.PUBLIC_URL + "/images/herofolder/animoji.png"} alt="profile" className="max-w-[155px]" />
                             <img src={process.env.PUBLIC_URL + "/images/herofolder/animoji2.png"} alt="profile" className="max-w-[155px]" />
@@ -86,24 +90,24 @@ function App() {
                             <img src={process.env.PUBLIC_URL + "/images/herofolder/animoji6.png"} alt="profile" className="max-w-[155px]" />
                         </div>
                         <div className="flex gap-4 justify-center " >
-                            <div className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
+                            <button className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
                                 <img src={process.env.PUBLIC_URL + "/images/herofolder/microphone-01.svg"} alt="microphone" className="w-5 h-5" />
-                            </div>
-                            <div className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
+                            </button>
+                            <button className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
                                 <img src={process.env.PUBLIC_URL + "/images/herofolder/video-recorder.svg"} alt="video-recorder" className="w-5 h-5" />
-                            </div>
-                            <div className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
+                            </button>
+                            <button className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
                                 <img src={process.env.PUBLIC_URL + "/images/herofolder/monitor-01.svg"} alt="monitor" className="w-5 h-5" />
-                            </div>
-                            <div className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
+                            </button>
+                            <button className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
                                 <img src={process.env.PUBLIC_URL + "/images/herofolder/face-smile.svg"} alt="face-smile" className="w-5 h-5" />
-                            </div>
-                            <div className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
+                            </button>
+                            <button className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
                                 <img src={process.env.PUBLIC_URL + "/images/herofolder/message-text-circle-02.svg"} alt="message" className="w-5 h-5" />
-                            </div>
-                            <div className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
+                            </button>
+                            <button className="p-3 w-[44px] h-[44px] border-[1px] border-[#D1E9FF] rounded-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] bg-[#FFFFFF] " >
                                 <img src={process.env.PUBLIC_URL + "/images/herofolder/settings-01.svg"} alt="settings" className="w-5 h-5" />
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -234,7 +238,7 @@ function App() {
                     <span className="mb-3 text-lg text-[#175CD3] font-semibold " >Support</span>
                     <h5 className="mb-5 text-[48px] font-semibold text-[#1D2939] " >FAQs</h5>
                     <p className="text-xl text-[#667085] " >
-                        Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please <span className="underline">chat to our friendly team.</span>
+                        Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please <span className="underline cursor-pointer ">chat to our friendly team.</span>
                     </p>
                 </div>
 
@@ -242,7 +246,7 @@ function App() {
                     {
                         faqs.map((faq, index) => {
                             return (
-                                <FAQ question={faq.question} last={faq.last} key={index} />
+                                <FAQ question={faq.question} last={faq.last} key={index} index = {index} currentFaq = {currentFaq} setCurrentFaq = {setCurrentFaq} />
                             )
                         })
                     }
@@ -339,7 +343,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="py-12 2xl:px-[160px] bg-[#F9FAFB] flex items-center justify-between">
+            <div className="py-12 px-[96px] 2xl:px-[160px] bg-[#F9FAFB] flex items-center justify-between">
                 <span className="text-base text-[#667085] " >
                     © 2023 ClearLink. All rights reserved.
                 </span>
